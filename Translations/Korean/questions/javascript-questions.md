@@ -2,6 +2,7 @@
 
 [프론트엔드 면접 질문 - JS 질문](https://github.com/h5bp/Front-end-Developer-Interview-Questions/blob/master/src/questions/css-questions.md)에 대한 해설입니다. Pull Request를 통한 제안, 수정 요청 환영합니다.
 
+
 - [이벤트 위임에 대해 설명하세요.](#이벤트-위임에-대해-설명하세요)
 - [`this`가 JavaScript에서 어떻게 작동하는지 설명하세요.](#this가-javascript에서-어떻게-작동하는지-설명하세요)
 - [프로토타입 상속이 어떻게 작동하는지 설명하세요.](#프로토타입-상속이-어떻게-작동하는지-설명하세요)
@@ -18,7 +19,7 @@
 - [`Function.prototype.bind`에 대해 설명하세요.](#functionprototypebind에-대해-설명하세요)
 - [언제 `document.write()`를 사용하나요?](#언제-documentwrite를-사용하나요)
 - [Feature detection, Feature inference, UA String의 차이점은 무엇인가요?](#feature-detection-feature-inference-ua-string의-차이점은-무엇인가요)
-- [Ajax에 대해 가능한한 자세히 설명하세요.](#ajax에-대해-가능한한-자세히-설명하세요)
+- [Ajax에 대해 가능한 한 자세히 설명하세요.](#ajax에-대해-가능한-한-자세히-설명하세요)
 - [Ajax를 사용하는 것의 장단점은 무엇인가요?](#ajax를-사용하는-것의-장단점은-무엇인가요)
 - [JSONP가 어떻게 동작하는지(그리고 Ajax와 어떻게 다른지)를 설명하세요.](#jsonp가-어떻게-동작하는지그리고-ajax와-어떻게-다른지를-설명하세요)
 - [JavaScript 템플릿을 사용한 적이 있나요? 사용해봤다면, 어떤 라이브러리를 사용했나요?](#JavaScript-템플릿을-사용한-적이-있나요-사용해봤다면-어떤-라이브러리를-사용했나요)
@@ -410,7 +411,7 @@ if (document.getElementsByTagName) {
 
 [[↑] Back to top](#js-질문)
 
-### Ajax에 대해 가능한한 자세히 설명하세요.
+### Ajax에 대해 가능한 한 자세히 설명하세요.
 
 Ajax(asynchronous JavaScript and XML)는 비동기 웹 응용 프로그램을 만들기 위해 클라이언트 측에서 사용되는 웹 개발 기술의 집합입니다. Ajax를 사용하면 웹 애플리케이션은 기존 페이지의 화면 및 동작을 방해하지 않으면서 백그라운드에서 비동기적으로 서버로 데이터를 보내고 서버에서 데이터를 받아올 수 있습니다. Ajax는 프리젠테이션 레이어에서 데이터 교환 레이어를 분리함으로써, 웹페이지 및 확장 웹 애플리케이션이 전체 페이지를 다시 로드 할 필요 없이 동적으로 컨텐츠를 변경할 수 있도록 합니다. 실제로 최근에는 일반적으로 네이티브 JavaScript의 장점 때문에 XML대신 JSON을 사용합니다.
 
@@ -846,7 +847,7 @@ JavaScript로 컴파일되는 언어의 예로 CoffeeScript, Elm, ClojureScript,
 ```js
 const arr = ['a', 'b', 'c'];
 
-for (let [index, elem] of arr.entries()) { 
+for (let [index, elem] of arr.entries()) {
   console.log(index, ': ', elem);
 }
 ```
@@ -1054,7 +1055,7 @@ ES5에서 상속을 사용하는 것이 훨씬 더 불편하며, ES6 버전이 �
 
 ### 새 화살표 => 함수 문법에 대한 사용 예시를 들 수 있나요? 이 새로운 문법은 다른 함수와 어떻게 다른가요?
 
-화살표 함수의 한 가지 분명한 이점은 `function` 키워드를 사용하지 않고도 함수를 생성하는데 필요한 문법을 단순화하는 것입니다. 
+화살표 함수의 한 가지 분명한 이점은 `function` 키워드를 사용하지 않고도 함수를 생성하는데 필요한 문법을 단순화하는 것입니다.
 
 또한, 화살표 함수 내의 `this`는, `this`가 함수를 호출하는 객체에 의해 결정되는 일반 함수와 다르게, 주변 스코프에에 묶입니다.
 
@@ -1105,7 +1106,7 @@ sayNameFromWindow2(); // John
 이는 특히 React 클래스 컴포넌트에서 유용할 수 있습니다. 일반 함수를 사용하는 클릭 핸들러와 같은 클래스 메소드를 정의한 다음, 해당 클릭 핸들러를 하위 컴포넌트의 prop으로 전달하면 상위 컴포넌트의 생성자에서 `this`도 바인드해야합니다.
 
 대신 화살표 함수를 사용하면, 메소드가 `this`값을 주위 렉시컬 컨텍스트에서 자동으로 가져오기 때문에 `this`를 바인딩할 필요가 없습니다.
- 
+
 (좋은 데모, 샘플 코드는 [이 기사](https://medium.com/@machnicki/handle-events-in-react-with-arrow-functions-ede88184bbb)를 참조하세요.)
 
 ###### 참고자료
@@ -1307,7 +1308,7 @@ var result = [0, 1, 2, 3, 4, 5].map(addFive) // [5, 6, 7, 8, 9, 10]
 
 ### spread 문법을 사용할 때의 이점은 무엇이며 rest 문법과 다른 점은 무엇인가요?
 
-ES6의 spread 문법은 함수형 패러다임에서 코딩할 때 매우 유용합니다. 왜냐하면 `Object.create`, `slice`나 라이브러리 함수를 사용하지 않고도 배열이나 객체의 복사본을 쉽게 만들 수 있기 때문입니다. 이 언어 기능은 Redux나 Rx.js를 사용하는 프로젝트에서 많이 사용됩니다.
+ES6의 spread 문법은 함수형 패러다임에서 코딩할 때 매우 유용합니다. 왜냐하면 `Object.create`, `slice`나 라이브러리 함수를 사용하지 않고도 배열이나 객체의 복사본을 쉽게 만들 수 있기 때문입니다. 이 언어 기능은 Redux나 RxJS를 사용하는 프로젝트에서 많이 사용됩니다.
 
 ```js
 function putDookieInAnyArray(arr) {
@@ -1357,7 +1358,7 @@ const { e, f, ...others } = {
 
 클라이언트(브라우저 환경)에서는, 변수/함수가 전역 스코프(`window`)에 선언되어있는 한 모든 스크립트가 이를 참조할 수 있습니다. 또는, 보다 모듈형 접근 방식을 위해 RequireJS를 통해 비동기 모듈 정의(AMD)를 이용합니다.
 
-서버(Node.js)에서 일반적인 방법은 CommanJS를 사용하는 것입니다. 각 파일은 모듈로 취급되며, 변수와 함수를 `module.exports` 객체에 붙여서 내보낼 수 있습니다.
+서버(Node.js)에서 일반적인 방법은 CommonJS를 사용하는 것입니다. 각 파일은 모듈로 취급되며, 변수와 함수를 `module.exports` 객체에 붙여서 내보낼 수 있습니다.
 
 ES2015에서는 AMD 및 commonJS를 모두 대체하기 위한 모듈 문법을 정의합니다. 이 기능은 브라우저 및 노드 환경 모두에서 지원됩니다.
 
